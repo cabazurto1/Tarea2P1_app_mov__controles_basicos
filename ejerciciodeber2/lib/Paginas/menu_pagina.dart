@@ -13,8 +13,14 @@ class MenuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Menú de Ejercicios'),
+        title: const Text(
+          'Menú de Ejercicios',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
         backgroundColor: const Color(0xFF031634),
+        foregroundColor: Colors.white,
       ),
       drawer: Drawer(
         child: Container(

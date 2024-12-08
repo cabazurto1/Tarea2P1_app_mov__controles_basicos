@@ -31,29 +31,79 @@ class _Ejercicio2PageState extends State<Ejercicio2Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Ejercicio 2: Factorial')),
+      appBar: AppBar(
+        title: const Text(
+          'Ejercicio 2: Factorial',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Text(
+              'Calculadora de Factorial',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const Divider(thickness: 2, color: Colors.green),
+            const SizedBox(height: 20),
             TextField(
               controller: _controller,
               keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Ingrese un número entero',
-                border: OutlineInputBorder(),
+                labelStyle: const TextStyle(color: Colors.green),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.green, width: 2.0),
+                ),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _calcularFactorial,
-              child: const Text('Calcular Factorial'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
+              ),
+              child: const Text(
+                'Calcular Factorial',
+                style: TextStyle(
+                    fontSize: 16,
+                  color: Colors.white,
+                ),
+
+              ),
             ),
             const SizedBox(height: 20),
-            Text(
-              _resultado,
-              style: const TextStyle(fontSize: 18, color: Colors.black),
-              textAlign: TextAlign.center,
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.green[50],
+                borderRadius: BorderRadius.circular(8.0),
+                border: Border.all(color: Colors.green[300]!),
+              ),
+              child: Text(
+                _resultado,
+                style: const TextStyle(fontSize: 18, color: Colors.green),
+                textAlign: TextAlign.center,
+              ),
+              width: 500,
             ),
           ],
         ),

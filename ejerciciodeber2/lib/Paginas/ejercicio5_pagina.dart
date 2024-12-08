@@ -9,7 +9,15 @@ class Ejercicio5Page extends StatelessWidget {
     final primos = numerosPrimos(3, 32767);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Ejercicio 5: Números Primos')),
+      appBar: AppBar(title: const Text(
+          'Ejercicio 5: Números Primos',
+        style: TextStyle(
+          color: Colors.white
+        ),
+        ),
+          backgroundColor: Colors.blue[500],
+        foregroundColor: Colors.white,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
