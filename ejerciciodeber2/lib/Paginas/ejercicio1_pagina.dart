@@ -23,7 +23,8 @@ class Ejercicio1Page extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+
           children: [
             const Text(
               'Tabla de Caracteres ASCII',
@@ -32,6 +33,18 @@ class Ejercicio1Page extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurple,
               ),
+            ),
+            CircleAvatar(
+              radius: 50.0,
+              backgroundColor: Colors.white,
+              child: Icon(
+                  Icons.code,
+                  size:50.0,
+                  color: Colors.deepPurple
+              ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             const Divider(thickness: 2, color: Colors.deepPurple),
             const SizedBox(height: 10),

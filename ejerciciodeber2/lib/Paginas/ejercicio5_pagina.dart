@@ -21,11 +21,20 @@ class Ejercicio5Page extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
               'Lista de Números Primos entre 3 y 32767',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            CircleAvatar(
+              radius: 50.0,
+              backgroundColor: Colors.white,
+              child: Icon(
+                  Icons.numbers,
+                  size:50.0,
+                  color: Colors.blue[500]
+              ),
             ),
             const SizedBox(height: 10),
             Expanded(

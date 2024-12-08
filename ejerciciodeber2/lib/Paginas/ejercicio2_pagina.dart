@@ -55,6 +55,15 @@ class _Ejercicio2PageState extends State<Ejercicio2Page> {
               ),
               textAlign: TextAlign.center,
             ),
+            CircleAvatar(
+              radius: 50.0,
+              backgroundColor: Colors.white,
+              child: Icon(
+                  Icons.calculate_sharp,
+                  size:50.0,
+                  color: Colors.green
+              ),
+            ),
             const Divider(thickness: 2, color: Colors.green),
             const SizedBox(height: 20),
             TextField(

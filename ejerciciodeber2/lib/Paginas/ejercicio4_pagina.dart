@@ -55,7 +55,17 @@ class _Ejercicio4PageState extends State<Ejercicio4Page> {
                 fontWeight: FontWeight.bold,
                 color: Colors.pink,
               ),
+
               textAlign: TextAlign.center,
+            ),
+            CircleAvatar(
+              radius: 50.0,
+              backgroundColor: Colors.white,
+              child: Icon(
+                  Icons.calculate_outlined,
+                  size:50.0,
+                  color: Colors.pink
+              ),
             ),
             const Divider(thickness: 2, color: Colors.pink),
             const SizedBox(height: 20),
